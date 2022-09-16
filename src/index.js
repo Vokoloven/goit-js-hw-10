@@ -38,7 +38,7 @@ function disperseCountries(countries) {
     Notify.info('Too many matches found. Please enter a more specific name.');
   }
   for (let i = 0; i < countries.length; i += 1) {
-    countriesObj = {
+    const countriesObj = {
       countryName: countries[i].name.common,
       countryNameOfficial: countries[i].name.official,
       countryCapital: countries[i].capital,
