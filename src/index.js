@@ -23,13 +23,7 @@ function inputCountryName(e) {
     resetRequest();
   } else {
     resetRequest();
-    fetchCountries(countryName).then(countries => {
-      if (countries.status === 404) {
-        Notify.failure('Oops, there is no country with that name');
-      } else {
-        disperseCountries(countries);
-      }
-    });
+    fetchCountries(countryName).then(countries => disperseCountries(countries));
   }
 }
 
